@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Bitcount';
+  src: url('./assets/BitcountGridSingle-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/Montserrat-Light.ttf');
+}
+
+$fuentetext: Montserrat;
+$fuentetitulo01: Bitcount;
+$color00: rgb(39, 39, 39);
+$color01: aliceblue;
+$color02: #00c7a9;
+$color03: #0e3e90;
+
+header, nav, main, footer, section{
+  width: 100%;
+}
