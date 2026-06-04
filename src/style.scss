@@ -1,4 +1,7 @@
 @use 'config' as c;
+@use 'art01';
+@use 'art02';
+
 
 header{
   height: 100dvh;
@@ -9,18 +12,6 @@ header{
   align-items: center;
   justify-content: center;
   row-gap: 2rem;
-}
-
-h1{
-  font-family: c.$fuentetitulo01;
-  font-size: clamp(2rem, 5vw, 6rem);
-  color: c.$color01;
-  @media only screen and (min-width: 800px){
-    color: c.$color03;
-  }
-  @media only screen and (min-width: 1100px){
-    color: c.$color00;
-  }
 }
 
 .boton{
@@ -36,10 +27,10 @@ h1{
     background-color: c.$color01;
     color: c.$color02;
   }
-  @media only screen and (min-width: 800px){
+  @media only screen and (min-width: c.$tablet){
     color: c.$color03;
   }
-  @media only screen and (min-width: 1100px){
+  @media only screen and (min-width: c.$desktop){
     color: c.$color00;
   }
 }

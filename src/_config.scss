@@ -15,8 +15,12 @@
   src: url('./assets/Montserrat-Light.ttf');
 }
 
+$tablet:800px;
+$desktop:1300px;
+
 $fuentetext: Montserrat;
 $fuentetitulo01: Bitcount;
+
 $color00: rgb(39, 39, 39);
 $color01: aliceblue;
 $color02: #00c7a9;
@@ -24,4 +28,39 @@ $color03: #0e3e90;
 
 header, nav, main, footer, section{
   width: 100%;
+}
+
+h1{
+  font-family: $fuentetitulo01;
+  font-size: clamp(2rem, 5vw, 6rem);
+  color: $color01;
+  @media only screen and (min-width: $tablet){
+    color: $color03;
+  }
+  @media only screen and (min-width: $desktop){
+    color: $color00;
+  }
+}
+
+h2, h4, p{
+  font-family: $fuentetext;
+}
+
+h3{
+  font-family: $fuentetext;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: $color03;
+  font-weight: 700;
+
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  padding: 2rem 0rem;
+  @media only screen and (min-width: $tablet){
+    padding: 4rem 0rem;
+  }
 }
