@@ -2,29 +2,30 @@
 
 .art02{
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 0rem 1.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   row-gap: 2rem;
+  @media only screen and (min-width: c.$tablet){
+    padding: 2rem 0rem;
+  }
   @media only screen and (min-width: c.$desktop){
     width: 80%;
-    padding: initial;
     row-gap: 3rem;
   }
   >:nth-child(1){
     width: 100%;
-    @media only screen and (min-width: c.$tablet){
-      width: 80%;
-    }
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     row-gap: 1.5rem;
+    @media only screen and (min-width: c.$tablet){
+      width: 80%;
+    }
   }
 
   >:nth-child(2){
@@ -36,16 +37,21 @@
     justify-content: flex-start;
     row-gap: 1.5rem;
     @media only screen and (min-width: c.$tablet){
+      padding: 0rem 1.5rem;
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
       column-gap: 1.5rem; 
       row-gap: initial;
     }
+    @media only screen and (min-width: c.$desktop){
+      padding: initial;
+    }
 
     .item{
       width: 100%;
-      height: calc(100dvw - 3rem);
+      aspect-ratio: 1/1; // para poner la foto cuadrada
+      // height: calc(100dvw - 3rem); si hago este calc le tengo que poner la media query de height: 40dvh
       overflow: hidden;
       position: relative;
 
@@ -54,9 +60,9 @@
       align-items: center;
       justify-content: center;
 
-      @media only screen and (min-width: c.$tablet){
+/*    @media only screen and (min-width: c.$tablet){
         height: 40dvh; 
-      }
+      } */
 
       img{
         width: 100%;
@@ -67,10 +73,9 @@
       >:nth-child(1){
         position: absolute;
         z-index: 100;
-        font-size: clamp(2rem, 5vw, 7rem);
-        color: c.$color01;
+        font-size: clamp(2rem, 3vw, 3.5rem);
         text-align: center;
-
+        // para llevar al medio la caja absolute, poner position relative a su padre.
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

@@ -1,6 +1,7 @@
 @use 'config' as c;
 @use 'art01';
 @use 'art02';
+@use 'art03';
 
 
 header{
@@ -12,25 +13,4 @@ header{
   align-items: center;
   justify-content: center;
   row-gap: 2rem;
-}
-
-.boton{
-  text-decoration: none;
-  padding: 1rem 3rem;
-  background-color: c.$color02;
-  border-radius: 5px;
-  color:c.$color01;
-  transition: 1s;
-  font-family: c.$fuentetext;
-  font-weight: 600;
-  &:hover{
-    background-color: c.$color01;
-    color: c.$color02;
-  }
-  @media only screen and (min-width: c.$tablet){
-    color: c.$color03;
-  }
-  @media only screen and (min-width: c.$desktop){
-    color: c.$color00;
-  }
 }

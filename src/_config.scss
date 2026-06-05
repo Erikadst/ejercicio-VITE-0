@@ -42,7 +42,7 @@ h1{
   }
 }
 
-h2, h4, p{
+h2, p{
   font-family: $fuentetext;
 }
 
@@ -51,7 +51,13 @@ h3{
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   color: $color03;
   font-weight: 700;
+}
 
+h4{
+  font-family: $fuentetext;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: $color01;
+  font-weight: 600;
 }
 
 section{
@@ -64,3 +70,25 @@ section{
     padding: 4rem 0rem;
   }
 }
+
+.boton{
+  text-decoration: none;
+  padding: 1rem 3rem;
+  background-color: $color02;
+  border-radius: 5px;
+  color:$color01;
+  transition: 1s;
+  font-family: $fuentetext;
+  font-weight: 600;
+  &:hover{
+    background-color: $color01;
+    color: $color02;
+  }
+  @media only screen and (min-width: $tablet){
+    color: $color03;
+  }
+  @media only screen and (min-width: $desktop){
+    color: $color00;
+  }
+}
+
