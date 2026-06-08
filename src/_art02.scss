@@ -47,6 +47,12 @@
     @media only screen and (min-width: c.$desktop){
       padding: initial;
     }
+    >:nth-child(3){
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+    }
 
     .item{
       width: 100%;
@@ -63,13 +69,30 @@
 /*    @media only screen and (min-width: c.$tablet){
         height: 40dvh; 
       } */
+       &:hover{
+        >:nth-child(1){
+          filter: opacity(1);
+          transition: 1s;
+          transform: translate(-50%, -300%);
+          @media only screen and (min-width:c.$tablet){
+            transform: translate(-50%, -150%);
+          }
 
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
+        p{
+          filter: opacity(1);
+          transition: 1s;
+          
+        }
+          
+        }
+        img{
+          filter: grayscale(1);
+          transform: scale(1.3);
+          transition: 1s;
+        }
+       }
+
+
       >:nth-child(1){
         position: absolute;
         z-index: 100;
@@ -79,6 +102,27 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: 1s;
+        
+      }
+
+      p{
+        color:rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.662);
+        position: absolute;
+        z-index: 200;
+        text-align: center;
+        transition: 1s;
+        filter: opacity(1);
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: grayscale(0);
+        transition: 1s;
       }
     }
   }

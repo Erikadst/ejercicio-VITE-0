@@ -42,8 +42,14 @@ h1{
   }
 }
 
-h2, p{
+h2{
+  font-family: $fuentetitulo01;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+
+}
+p{
   font-family: $fuentetext;
+
 }
 
 h3{
