@@ -30,7 +30,6 @@
 
   >:nth-child(2){
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,9 +48,12 @@
     }
     >:nth-child(3){
       width: 100%;
-
       display: flex;
       flex-direction: column;
+    }
+
+    p{
+      filter: grayscale(0);
     }
 
     .item{
@@ -63,7 +65,7 @@
 
       display: flex;
       flex-direction: column;
-      align-items: center;
+      
       justify-content: center;
 
 /*    @media only screen and (min-width: c.$tablet){
@@ -71,49 +73,46 @@
       } */
        &:hover{
         >:nth-child(1){
-          filter: opacity(1);
           transition: 1s;
-          transform: translate(-50%, -300%);
+          transform: translate(-50%, -200%);
           @media only screen and (min-width:c.$tablet){
-            transform: translate(-50%, -150%);
+            transform: translate(-50%, -140%);
           }
-
+        }
+        
         p{
-          filter: opacity(1);
           transition: 1s;
-          
+          filter: opacity(1);
         }
-          
-        }
+        
         img{
           filter: grayscale(1);
-          transform: scale(1.3);
+          transform: scale(1.2);
           transition: 1s;
         }
        }
 
-
       >:nth-child(1){
         position: absolute;
         z-index: 100;
-        font-size: clamp(2rem, 3vw, 3.5rem);
         text-align: center;
         // para llevar al medio la caja absolute, poner position relative a su padre.
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: 1s;
-        
+        transition: 1s; 
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.649);
       }
 
       p{
-        color:rgb(0, 0, 0);
-        background-color: rgba(255, 255, 255, 0.662);
+        background-color: rgba(255, 255, 255, 0.781);
         position: absolute;
         z-index: 200;
-        text-align: center;
-        transition: 1s;
-        filter: opacity(1);
+        transform: translateY(30%);
+        transition: .5s;
+        filter: opacity(0);
+        padding: 1.5rem 2rem;
+        backdrop-filter: blur(2px);
       }
 
       img{

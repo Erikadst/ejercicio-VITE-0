@@ -49,19 +49,20 @@ h2{
 }
 p{
   font-family: $fuentetext;
+  color: $color00;
 
 }
 
 h3{
   font-family: $fuentetext;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   color: $color03;
   font-weight: 700;
 }
 
 h4{
   font-family: $fuentetext;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 2.5vw, 3rem);
   color: $color01;
   font-weight: 600;
 }
