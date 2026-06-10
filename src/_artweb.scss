@@ -1,0 +1,39 @@
+@use 'config' as c;
+
+.artweb{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width:c.$tablet){
+        width: 80%;
+        padding: 2rem 0rem;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        @media only screen and (min-width:c.$tablet){
+            flex-direction: row;
+        }
+        h4{
+            font-size: clamp(1rem, 3vw, 2rem);
+            color: c.$color02;
+        }    
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+            @media only screen and (min-width:c.$tablet){
+                width: 30%;
+            }
+        }
+    
+    }
+}
