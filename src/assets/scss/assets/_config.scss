@@ -51,7 +51,6 @@ h2{
 p{
   font-family: $fuentetext;
   color: $color00;
-  padding: .5rem;
 
 }
 
@@ -61,7 +60,6 @@ h3{
   color: $color03;
   font-weight: 700;
   text-align: center;
-  padding: 1.5rem;
 }
 
 h4{
@@ -69,7 +67,6 @@ h4{
   font-size: clamp(2rem, 2.5vw, 3rem);
   color: $color01;
   font-weight: 600;
-  padding:1.5rem ;
 }
 
 section{

@@ -1,5 +1,3 @@
-// Variables y constantes
-
 let mivariable
 let miotravariable
 const mivariableinalterable = 'cualquier cosa'
@@ -26,5 +24,31 @@ h4.style.color='#00c7a9'
 console.log(boton)
 
 boton.addEventListener("click", function(){
-    console.log("has presionado el botón")
+    boton.style.backgroundColor = 'pink'
+    boton.style.color = 'black'
 })
+
+/* si tengo muchos botones va a cambiar el color al que se haga en click */
+
+const botones = document.querySelectorAll('.boton')
+
+botones.forEach(function(boton){
+    boton.addEventListener('click', function(){
+        boton.style.backgroundColor = 'pink'
+        boton.style.color = 'black'
+    })
+})
+
+
+// Funcion flecha 
+/*
+const botones = document.querySelectorAll('.boton')
+
+botones.forEach ((boton)=>{
+    boton.addEventListener('click', ()=>{
+        boton.style.backgroundColor='pink'
+        boton.style.color='black'
+    })
+}) */
+
+//
