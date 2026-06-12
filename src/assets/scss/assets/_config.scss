@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: 'Bitcount';
-  src: url('./assets/BitcountGridSingle-ExtraLight.ttf');
+  src: url('../../fonts/BitcountGridSingle-ExtraLight.ttf');
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/Montserrat-Light.ttf');
+  src: url('../../fonts/Montserrat-Light.ttf');
 }
 
 $tablet:800px;
@@ -51,6 +51,7 @@ h2{
 p{
   font-family: $fuentetext;
   color: $color00;
+  padding: .5rem;
 
 }
 
@@ -59,6 +60,8 @@ h3{
   font-size: clamp(2rem, 3vw, 3.5rem);
   color: $color03;
   font-weight: 700;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 h4{
@@ -66,6 +69,7 @@ h4{
   font-size: clamp(2rem, 2.5vw, 3rem);
   color: $color01;
   font-weight: 600;
+  padding:1.5rem ;
 }
 
 section{
@@ -88,6 +92,7 @@ section{
   transition: 1s;
   font-family: $fuentetext;
   font-weight: 600;
+  
   &:hover{
     background-color: $color01;
     color: $color02;

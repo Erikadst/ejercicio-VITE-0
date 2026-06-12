@@ -1,10 +1,10 @@
-@use 'config' as c;
-@use 'art01';
-@use 'art02';
-@use 'art03';
-@use 'artgrid';
-@use 'artweb';
-@use 'articon';
+@use './assets/config' as c;
+@use './assets/art01';
+@use './assets/art02';
+@use './assets/art03';
+@use './assets/artgrid';
+@use './assets/artweb';
+@use './assets/articon';
 
 
 header{
