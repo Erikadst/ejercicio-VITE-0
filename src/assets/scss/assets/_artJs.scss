@@ -2,17 +2,19 @@
 
 .artJs{
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 2rem 1.5rem;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    row-gap: 2rem;
-
-    @media only screen and (min-width:c.$desktop){
+    gap: 2rem;
+    @media only screen and (min-width:c.$tablet){
         width: 80%;
-        padding: initial;
+        flex-direction: row;
+    }
+    h4{
+        color:c.$color02;
     }
     >:nth-child(1){
         align-self: flex-start;
@@ -23,13 +25,13 @@
         flex-direction: column;        
         row-gap: 0.5rem;
         @media only screen and (min-width:c.$tablet){
-            flex-direction: row;
+            flex-direction: column;
             column-gap: 0.5rem;
             row-gap: initial;
         }
         >div{
             width: 100%;
-            padding: 0.5rem;
+            padding: 1.5rem;
             border-radius: 5px;
             border: 2px solid c.$color01;
             display: flex;
@@ -40,5 +42,14 @@
                 padding: 2rem;
             }
         }
+    }
+    .desplegable{
+        height: 55px;
+        overflow: hidden;
+        interpolate-size: allow-keywords;
+        transition: 1s height ease-in-out;
+    }
+    .open{
+        height: auto;
     }
 }
