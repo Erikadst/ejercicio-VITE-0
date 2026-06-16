@@ -11,7 +11,7 @@
     gap: 2rem;
     @media only screen and (min-width:c.$tablet){
         width: 80%;
-        flex-direction: row;
+        flex-direction: column;
     }
     h4{
         color:c.$color02;

@@ -59,13 +59,31 @@ botones.forEach ((boton)=>{
 
 //Desplegable
 const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
-
-botonesDesplegar.forEach ((botonDesplegar)=>{
-    botonDesplegar.addEventListener("click", ()=>{
+//item representa los elementos que va a recorrer
+botonesDesplegar.forEach ((item)=>{
+    item.addEventListener("click", ()=>{
         //coge el elemento anterior a el previousElementSibling
-        const miParrafo=botonDesplegar.previousElementSibling
+        const miParrafo=item.previousElementSibling
         //classlist para llamar a los estilos y añadir o quitar la clase open lo hace toggle
         miParrafo.classList.toggle("open")
+
+        //contains me devuelve true o false si el elemento contiene esa clase o no
+        console.log(miParrafo.classList.contains("open"))
+
+       /*  if (miParrafo.classList.contains("open")===true){
+            item.textContent="Leer menos"
+        }else{
+            item.textContent="Leer más"
+        } */
+
+        //Operador ternario
+        item.textContent = miParrafo.classList.contains("open") ? "Leer menos" : "Leer más";
+
+        //Operario ternario optimizado
+        //const h = miParrafo.classList.contains("open")
+        //item.textContent = h ? "Leer menos" : "Leer más"
+   
     })
 })
+
 
