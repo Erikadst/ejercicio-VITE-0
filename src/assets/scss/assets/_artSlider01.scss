@@ -46,7 +46,7 @@
             object-position: center;
             transition: 1s;
         }
-        }
+    }
     .artSlider01__track{
         display: flex;
         justify-content: center;
@@ -68,4 +68,26 @@
 
         }
     }
+    .artSlider01__arrow{
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top:42%;
+        border-radius: 50%;
+        font-size: 2rem;
+        transition: 200ms;
+        border: none;
+        &--prev{
+            left: 25px;
+        }
+        &--next{
+            left: 85%;
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: c.$color02;
+            color: c.$color01;
+        }
+    }
+
 }

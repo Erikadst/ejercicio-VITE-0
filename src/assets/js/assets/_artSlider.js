@@ -6,13 +6,29 @@ export default function artSlider() {
             const $pista = $el.querySelector(".artSlider01__pista");
             const $sliders = $el.querySelectorAll(".artSlider01__slide");
             const $dots = $el.querySelectorAll(".artSlider01__track__dot");
+            const $btnPrev = $el.querySelector(".artSlider01__arrow--prev");
+            const $btnNext = $el.querySelector(".artSlider01__arrow--next");
 
-            console.log($dots);
+            let contador = 0;
+            let idInterval;
+
+            $btnPrev.addEventListener("click", (e)=>{
+                autoPlayInterval();
+                contador = contador -1;
+                renderSlide(contador, $pista, tiempoTransicion);
+                console.log(contador, "prev");
+                autoPlayInterval();
+  
+            })
+            $btnNext.addEventListener("click", (e)=>{
+                contador += 1;
+                renderSlide();
+                console.log(contador, "next");
+            })
+
             //Comprobar que nuestra pista y los slider existan dentro del DOM
             if (!$pista | $sliders.length === 0) return;
             //console.log ($pista, $sliders);
-
-            let contador = 0;
 
             const tiempoTransicion = 500;
             const tiempoEspera = 3000;
@@ -22,34 +38,54 @@ export default function artSlider() {
                 $pista.appendChild($copia);
             });
 
-            setInterval(() => {
-                //contador = contador +1;
-                contador++;
-                $pista.style.transform= `translateX(-${100*contador}%)`;
-                $pista.style.transition=`transform ${tiempoTransicion}ms`
-                $dots[contador - 1]?.classList.remove("active");
-                $dots[contador]?.classList.add("active");
-                //Siguiente elemento dot
-                if ($dots[contador]){
-                    $dots[contador].classList.add("Active");
-                } else {
-                    $dots[0].classList.add("active");
-                }
 
-                //Validar que el contador sea igual al numero de la ultima posicion del slider
-                if (contador === $sliders.length){
-                    setTimeout(()=>{
-                    //console.log({contador});
-                    //reiniciar contador
-                        contador = 0
-                        $pista.style.transform =`translateX(0)`;
-                        $pista.style.transition="none";
-                    },tiempoTransicion);
+            autoPlayInterval();
 
-                }}, tiempoEspera);
+        function renderSlide(){
+            console.log(contador)
+            $pista.style.transform= `translateX(-${100*contador}%)`;
+            $pista.style.transition=`transform ${tiempoTransicion}ms`;
+        } 
 
-/*          setTimeout(()=> {},tiempoEspera);
-            console.log(`Me ejecuto cada ${tiempoEspera}`) */
+        function resetPista(){
+            $pista.style.transform = "none";
+            $pista.style.transition = "translateX(0)";
+            contador = 0;
+        }
 
-        })
+        function renderDots(){
+            $dots[contador - 1]?.classList.remove("active");
+            //Siguiente elemento dot
+            if ($dots[contador]){
+                $dots[contador].classList.add("active");
+            } else {
+                $dots[0].classList.add("active");
+            }
+        }
+
+        function autoPlayInterval(){
+            
+            if(!idInterval) {
+            idInterval = setInterval(() => {
+                handleInterval()
+            }, tiempoEspera);
+            } else {
+            clearInterval(idInterval);
+            idInterval= undefined
+            }
+            console.log(contador)
+        }
+
+        function handleInterval(){
+            contador++;
+            renderSlide();
+            renderDots();
+            //Validar que el contador sea igual al numero de la ultima posicion del slider
+            if (contador === $sliders.length){
+                setTimeout(()=>{
+                    resetPista();
+                },tiempoTransicion);
+            }
+        }
+        });
 }
