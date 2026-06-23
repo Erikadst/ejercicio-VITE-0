@@ -1,0 +1,18 @@
+.fab-button{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    color: aquamarine;
+    background-color: black; 
+    cursor: pointer;
+    transition: all .6s;
+    font-size: 1.5rem;
+    &:hover{
+        //para hacerlo mas pequeño el valor tiene que ser menor que 1
+        scale: 1.2;
+    }
+}
