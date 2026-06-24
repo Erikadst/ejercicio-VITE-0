@@ -4,6 +4,8 @@ import artSlider from './assets/_artSlider.js';
 import { artAcordeon01 } from './assets/_artAcordeon01.js';
 import topBottom from './assets/_topBottom.js';
 import darkMode from './assets/_darkMode.js';
+import observer from './assets/_observer.js';
+
 
 //con las funciones se espera a que el dom se carge
 //con el import no
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     $main.appendChild(topBottom());
     //llamar al js de la funcion darkMode
     darkMode();
+    observer();
 })
 
 

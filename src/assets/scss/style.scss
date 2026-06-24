@@ -11,7 +11,11 @@
 @use './assets/artSlider01';
 @use './assets/topBottom';
 @use './assets/nav';
+@use './assets/darkmode';
 
+body{
+  transition: all 1s;
+}
 header{
   height: 100dvh;
   background: linear-gradient(0deg, c.$color03,c.$color02);

@@ -1,0 +1,16 @@
+@use 'config' as c;
+
+body.dark{
+    h2{
+        color: rgb(76, 205, 162);
+    }
+    h3{
+        color: rgb(98, 164, 211);
+    }
+    p{
+        color:c.$color01;
+    }
+    background-color: c.$color00;
+    transition: all 1s;
+    
+}
