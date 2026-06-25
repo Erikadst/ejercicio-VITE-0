@@ -5,6 +5,7 @@ import { artAcordeon01 } from './assets/_artAcordeon01.js';
 import topBottom from './assets/_topBottom.js';
 import darkMode from './assets/_darkMode.js';
 import observer from './assets/_observer.js';
+import navScrollTop from './assets/_navScrollTop.js';
 
 
 //con las funciones se espera a que el dom se carge
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     //llamar al js de la funcion darkMode
     darkMode();
     observer();
+    navScrollTop();
 })
 
 
