@@ -1,0 +1,32 @@
+#modal{
+    position: fixed;
+    inset: 0; //top, left, rigth y bottom de 0 para que ocupe toda la pantalla
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal__container{
+        background-color: rgba(248, 254, 252, 0.837);
+        width: 80%;
+        height: 500px;
+        padding: 1rem ;
+        border-radius: 0.5rem;
+        .modal__header{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            .modal--btn-close{
+                font-size: 1.5rem;
+                transition: 300ms;
+                &:hover{
+                    cursor:pointer;
+                    scale: 1.3;
+                }
+            }
+        }
+        
+        
+    }
+}

@@ -6,6 +6,10 @@ import topBottom from './assets/_topBottom.js';
 import darkMode from './assets/_darkMode.js';
 import observer from './assets/_observer.js';
 import navScrollTop from './assets/_navScrollTop.js';
+import modal from './assets/_modal.js';
+import dialog from './assets/templates/dialog.js';
+import dialog1 from './assets/templates/dialog1.js';
+import dialog2 from './assets/templates/dialog2.js';
 
 
 //con las funciones se espera a que el dom se carge
@@ -21,6 +25,31 @@ document.addEventListener("DOMContentLoaded", ()=>{
     darkMode();
     observer();
     navScrollTop();
+    
+    const $btnOpenModal = document.querySelector("#openModal1")
+    const template = dialog()
+     
+    $btnOpenModal.addEventListener("click", ()=>{
+        document.body.appendChild(
+            modal(dialog())
+        );
+    })
+    const $btnOpenModal2 = document.querySelector("#openModal2")
+    const template2 = dialog1()
+     
+    $btnOpenModal2.addEventListener("click", ()=>{
+        document.body.appendChild(
+            modal(template2)
+        );
+    })
+    const $btnOpenModal3 = document.querySelector("#openModal3")
+    const template3 = dialog2()
+     
+    $btnOpenModal3.addEventListener("click", ()=>{
+        document.body.appendChild(
+            modal(template3)
+        );
+    })
 })
 
 
