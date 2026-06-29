@@ -16,8 +16,21 @@ console.log(template)
     </div>`
 
     const $btnClose = $modal.querySelector(".modal--btn-close")
+    const $modalContainer = $modal.querySelector(".modal__container")
     
     $btnClose.addEventListener("click", ()=> $modal.remove());
 
+    $modal.addEventListener("click", (event)=>{
+        if(event.target.closest("[data-modal-close]")){
+            $modal.remove()
+        }
+        //cuando se hace click fuera de la caja se pueda cerrar aparte de darle a la x
+        if(!$modalContainer.contains(event.target)){
+            console.log(event.target)
+            $modal.remove()
+        }
+
+    })
+
         return $modal; 
-    }
+}

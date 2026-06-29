@@ -10,6 +10,7 @@ import modal from './assets/_modal.js';
 import dialog from './assets/templates/dialog.js';
 import dialog1 from './assets/templates/dialog1.js';
 import dialog2 from './assets/templates/dialog2.js';
+import validationForm from './assets/_validationForm.js';
 
 
 //con las funciones se espera a que el dom se carge
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             modal(template3)
         );
     })
+    validationForm();
 })
 
 
